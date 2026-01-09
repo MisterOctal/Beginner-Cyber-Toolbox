@@ -1,0 +1,67 @@
+import socket
+import ipaddress
+import sys
+
+def get_valid_ip():
+    while True:
+        ip_input = input("Enter the target IP address: ")
+        try:
+            # This validates if the string is a real IP address
+            return str(ipaddress.ip_address(ip_input))
+        except ValueError:
+            print("Invalid IP address format. Please try again (e.g., 192.168.1.1).")
+
+def get_valid_port_range():
+    while True:
+        try:
+            start_port = int(input("Enter start port (1-65535): "))
+            end_port = int(input("Enter end port (1-65535): "))
+            
+            if 1 <= start_port <= 65535 and 1 <= end_port <= 65535:
+                if start_port <= end_port:
+                    return start_port, end_port
+                else:
+                    print("Error: Start port must be less than or equal to end port.")
+            else:
+                print("Error: Ports must be between 1 and 65535.")
+        except ValueError:
+            print("Error: Please enter valid numerical port numbers.")
+
+def scan_and_grab(ip, start, end):
+    print(f"\n--- Scanning and Grabbing Banners on {ip} ---")
+    try:
+        for port in range(start, end + 1):
+            # Create socket using 'with' to ensure it closes
+            with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+                s.settimeout(1.0) # Increased timeout slightly for banner response
+                
+                # connect_ex returns 0 for success
+                result = s.connect_ex((ip, port))
+                
+                if result == 0:
+                    try:
+                        # Attempt to receive up to 1024 bytes of data
+                        banner = s.recv(1024).decode().strip()
+                        if banner:
+                            print(f"[+] Port {port} is OPEN | Banner: {banner}")
+                        else:
+                            print(f"[+] Port {port} is OPEN | (No banner received)")
+                    except socket.timeout:
+                        # Some ports are open but don't push a banner immediately
+                        print(f"[+] Port {port} is OPEN | (Banner timeout)")
+                    except Exception:
+                        print(f"[+] Port {port} is OPEN | (Could not decode banner)")
+                        
+    except KeyboardInterrupt:
+        print("\nScan stopped by user.")
+        sys.exit()
+    except socket.error:
+        print("\nCouldn't connect to server.")
+        sys.exit()
+
+if __name__ == "__main__":
+    target_ip = get_valid_ip()
+    start_p, end_p = get_valid_port_range()
+    scan_and_grab(target_ip, start_p, end_p)
+
+    print("\nScan and grab completed.")
