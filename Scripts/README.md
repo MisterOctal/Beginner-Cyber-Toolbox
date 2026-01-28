@@ -3,6 +3,10 @@
 * **Purpose:** Identifies open TCP ports on a target IP.
 * **Concepts:** TCP Handshake, Scanning using `socket`, Input Validation.
 
+### 2. Banner Grabber
+* **Purpose:** An advanced version of the Port Scanner that now also grabs the banner of an open port.
+* **Concepts:** TCP Handshake, Scanning using `socket`, Banner grabbing using `recv`, Input Validation.
+
 ### ⚠️ Legal Disclaimer
 These tools must only be used on systems, networks, and data where you have explicit, written permission from the owner. Use on any third-party infrastructure (including public websites, company networks, or home Wi-Fi you do not own) without authorization is strictly prohibited and may be illegal under the Computer Misuse Act 1990. 
 
