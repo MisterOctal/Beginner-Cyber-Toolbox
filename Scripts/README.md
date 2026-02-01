@@ -11,6 +11,9 @@
 * **Purpose:** Identifies active devices on a target Network.
 * **Concepts:** ICMP Echo Requests, OS Detection using `platform`, Command Execution using `os`, Input Validation.
 
+### 4. Caesar Cipher
+* **Purpose:** Encrypts and decrypts messages using the Caesar cipher technique. Also includes a brute-force attack function to crack the cipher.
+* **Concepts:** String manipulation, Character shifting, Brute-force attack.
 ---
 
 ### ⚠️ Legal Disclaimer
