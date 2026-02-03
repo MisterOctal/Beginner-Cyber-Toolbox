@@ -14,6 +14,10 @@
 ### 4. Caesar Cipher
 * **Purpose:** Encrypts and decrypts messages using the Caesar cipher technique. Also includes a brute-force attack function to crack the cipher.
 * **Concepts:** String manipulation, Character shifting, Brute-force attack.
+
+### 5. Password Evaluator
+* **Purpose:** Examines an input password to determine complexity.
+* **Concepts:** String examination using `re`, Password Hygiene, Security Awareness.
 ---
 
 ### ⚠️ Legal Disclaimer
