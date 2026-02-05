@@ -18,6 +18,10 @@
 ### 5. Password Evaluator
 * **Purpose:** Examines an input password to determine complexity.
 * **Concepts:** String examination using `re`, Password Hygiene, Security Awareness.
+
+### 6. File Integrity Checker 
+* **Purporse:** Detects unauthroized changes to a file by comparing its current cryptographic hash against a saved basline. Also includes a SHA-256 hash generator.
+* **Concepts:** Data Integrity (CIA Triad), SHA-256 Hashing using `hashlib`, FILE I/O, Baseline Managemenet.
 ---
 
 ### ⚠️ Legal Disclaimer
