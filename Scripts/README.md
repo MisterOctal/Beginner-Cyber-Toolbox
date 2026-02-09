@@ -22,6 +22,10 @@
 ### 6. File Integrity Checker 
 * **Purporse:** Detects unauthroized changes to a file by comparing its current cryptographic hash against a saved basline. Also includes a SHA-256 hash generator.
 * **Concepts:** Data Integrity (CIA Triad), SHA-256 Hashing using `hashlib`, FILE I/O, Baseline Managemenet.
+
+### 7. IP Investigator
+* **Purporse:** Performs reconnaissance on a target IP address by querying external APIs to retrieve registration data, geographical location, and organizational ownership.
+* **Concepts:** Threat Intelligence, API Integration using `requests`, JSON Parsing, and OSINT (Open Source Intelligence).
 ---
 
 ### ⚠️ Legal Disclaimer
