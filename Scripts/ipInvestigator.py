@@ -43,4 +43,5 @@ if __name__ == "__main__":
         print("[-] Error: No input provided.")
         sys.exit()
 
+
     print("\nTask completed.")
