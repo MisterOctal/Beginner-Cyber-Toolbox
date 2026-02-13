@@ -26,6 +26,10 @@
 ### 7. IP Investigator
 * **Purporse:** Performs reconnaissance on a target IP address by querying external APIs to retrieve registration data, geographical location, and organizational ownership.
 * **Concepts:** Threat Intelligence, API Integration using `requests`, JSON Parsing, and OSINT (Open Source Intelligence).
+
+### 8. Subdomain Enumerator
+* **Purpose:** Performs reconnaissance on a target domain by attempting to resolve common subdomains from a wordlist to map out a target's web infrastructure.
+* **Concepts:** DNS Discovery, HTTP Status Codes, File I/O (Wordlist handling), and Request Handling using  `requests`.
 ---
 
 ### ⚠️ Legal Disclaimer
