@@ -30,6 +30,10 @@
 ### 8. Subdomain Enumerator
 * **Purpose:** Performs reconnaissance on a target domain by attempting to resolve common subdomains from a wordlist to map out a target's web infrastructure.
 * **Concepts:** DNS Discovery, HTTP Status Codes, File I/O (Wordlist handling), and Request Handling using  `requests`.
+
+### 9. Simple Packet Sniffer
+* **Purpose:** Intercepts and analyzes real-time network traffic to identify protocols and data transmission patterns.
+* **Concepts:**  Network Layers (OSI Model), Packet Decapsulation, Raw Sockets, and Traffic Analysis using `scapy`.
 ---
 
 ### ⚠️ Legal Disclaimer
