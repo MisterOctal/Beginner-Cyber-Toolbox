@@ -1,6 +1,6 @@
 # Octal's Beginner Cyber Toolbox
 
-**Status:** Active | **Language:** Python | **Author:** MisterOctal
+**Status:** Paused due to HNC finals | **Language:** Python | **Author:** MisterOctal
 
 ## 📋 Overview
 This repository contains a collection of basic cybersecurity tools and scripts developed to demonstrate core concepts in network security, reconnaissance, and defensive coding. 
