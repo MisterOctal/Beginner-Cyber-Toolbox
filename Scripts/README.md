@@ -34,6 +34,10 @@
 ### 9. Simple Packet Sniffer
 * **Purpose:** Intercepts and analyzes real-time network traffic to identify protocols and data transmission patterns.
 * **Concepts:**  Network Layers (OSI Model), Packet Decapsulation, Raw Sockets, and Traffic Analysis using `scapy`.
+
+### 10. Password Generator
+* **Purpose:** Generate a complex password through random generation.
+* **Concepts:**  Random generation using `random`, Password Hygiene, Security Awareness.
 ---
 
 ### ⚠️ Legal Disclaimer
